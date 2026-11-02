@@ -97,13 +97,13 @@ The site is deployed with GitHub Pages: Settings > Pages > Deploy from a branch 
 | 2 Nov 2026 | README.md | Rewrote the README with the features, technologies, folder structure, deployment steps, changelog and references | Part 1 feedback: README could be improved |
 | 2 Nov 2026 | README.md | Rebuilt the changelog as a dated table with the file, change and reason | Part 1 feedback: changelog lacked detail |
 | 2 Nov 2026 | README.md | Added a reference list | Part 1 feedback: no references provided |
-| 2 Nov 2026 | All pages | Added a unique title, meta description and keywords, and one h1 per page | SEO |
-| 2 Nov 2026 | All pages | Replaced the footer with a version showing the date, a live clock and an automatic copyright year | Part 3 functionality |
-| 2 Nov 2026 | myfirststyles.css, part3.css | Changed the colour theme and fixed low-contrast text and the footer colours | Design and readability |
-| 2 Nov 2026 | index.html, part3.css | Added a tall dining image and fixed a misspelled class name | Visual improvement and bug fix |
-| 2 Nov 2026 | contact.html | Removed two broken map iframes and the placeholder text, and moved one working map above the footer | Bug fix |
-| 2 Nov 2026 | services.html | Added a JavaScript services list with search, filter and sort, and a lightbox gallery | Part 3 dynamic content |
-| 2 Nov 2026 | enquiries.html, contact.html | Added JavaScript validation, error messages and a processed response | Part 3 forms |
+| 31 0ct 2026 | All pages | Added a unique title, meta description and keywords, and one h1 per page | SEO |
+| 31 Oct 2026 | All pages | Replaced the footer with a version showing the date, a live clock and an automatic copyright year | Part 3 functionality |
+| 31 0ct 2026 | myfirststyles.css, part3.css | Changed the colour theme and fixed low-contrast text and the footer colours | Design and readability |
+| 30 Oct 2026 | index.html, part3.css | Added a tall dining image and fixed a misspelled class name | Visual improvement and bug fix |
+| 30 Oct 2026 | contact.html | Removed two broken map iframes and the placeholder text, and moved one working map above the footer | Bug fix |
+| 30 Oct 2026 | services.html | Added a JavaScript services list with search, filter and sort, and a lightbox gallery | Part 3 dynamic content |
+| 30 Oct 2026 | enquiries.html, contact.html | Added JavaScript validation, error messages and a processed response | Part 3 forms |
 
 ## References
 
@@ -114,8 +114,6 @@ Formspree (2026) Formspree: form backend for websites. Available at: https://for
 Google (2026) SEO starter guide. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
 
 Mozilla Developer Network (2026) Using media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Media_Queries/Using_media_queries (Accessed: 2 November 2026).
-
-OpenStreetMap contributors (2026) OpenStreetMap. Available at: https://www.openstreetmap.org (Accessed: 2 November 2026).
 
 W3C (2024) Web Content Accessibility Guidelines (WCAG) 2.2. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 2 November 2026).
 
