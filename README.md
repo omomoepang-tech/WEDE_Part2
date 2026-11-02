@@ -1,4 +1,4 @@
-# WEDE_Part2
+# WEDE_Part3
 ## Nova living resort
 ## Student Information
 # Omolemo Rorisang Oyero
@@ -60,3 +60,63 @@ Domain Name – R200/ year
 * The technical requirements, timeline, budget, hierarchy chart is now included in the website proposal
 * The CSS code was now added under css_assets folder which is called myfirststyles.css which includes the following:
   The website now has  background color, heading color, text color aligned images ,links, footer and many more
+
+  ## Part 3: Enhancing Functionality and SEO
+
+**Repository:** https://github.com/omomoepang-tech/WEDE_Part2
+**Live website:** https://omomoepang-tech.github.io/WEDE_Part2/
+
+### New features
+- **Interactive elements:** FAQ accordion (About), tabs and a gallery lightbox (Services), and a modal (Enquiries)
+- **Dynamic content:** the services list is built with JavaScript, with search, category filter and sorting
+- **Interactive map** on the Contact page
+- **Forms:** HTML5 and JavaScript validation with clear error messages on the Enquiries and Contact pages. The Enquiries form shows a cost estimate, and the Contact form compiles the message into an email
+- **Footer:** shows today's date, a live clock and an automatic copyright year
+- **SEO:** a unique title, meta description and meta keywords on every page, one h1 per page, descriptive image file names and alt text, robots.txt and sitemap.xml
+- **Responsive design:** media queries at 1400px, 1199px, 1024px, 768px, 600px and 400px, plus landscape phones
+
+### Technologies
+HTML5, CSS3, JavaScript, Leaflet / Google Maps embed, Formspree, Git and GitHub.
+
+### Folder structure
+- index.html, about.html, services.html, enquiries.html, contact.html
+- css_assets (myfirststyles.css, part3.css)
+- js_assets (part3.js)
+- _images
+- robots.txt, sitemap.xml, README.md
+
+### Deployment
+The site is deployed with GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root).
+
+## Changelog (Part 3)
+
+| Date | File(s) | Change | Reason |
+|------|---------|--------|--------|
+| 2 Nov 2026 | part3.css | Added media queries for large desktops, laptops, tablets (landscape and portrait), phones and small phones | Part 1 feedback: add more breakpoints for other screen sizes |
+| 2 Nov 2026 | All pages | Added a menu button so the navigation collapses on small screens | Responsive design |
+| 2 Nov 2026 | README.md | Rewrote the README with the features, technologies, folder structure, deployment steps, changelog and references | Part 1 feedback: README could be improved |
+| 2 Nov 2026 | README.md | Rebuilt the changelog as a dated table with the file, change and reason | Part 1 feedback: changelog lacked detail |
+| 2 Nov 2026 | README.md | Added a reference list | Part 1 feedback: no references provided |
+| 2 Nov 2026 | All pages | Added a unique title, meta description and keywords, and one h1 per page | SEO |
+| 2 Nov 2026 | All pages | Replaced the footer with a version showing the date, a live clock and an automatic copyright year | Part 3 functionality |
+| 2 Nov 2026 | myfirststyles.css, part3.css | Changed the colour theme and fixed low-contrast text and the footer colours | Design and readability |
+| 2 Nov 2026 | index.html, part3.css | Added a tall dining image and fixed a misspelled class name | Visual improvement and bug fix |
+| 2 Nov 2026 | contact.html | Removed two broken map iframes and the placeholder text, and moved one working map above the footer | Bug fix |
+| 2 Nov 2026 | services.html | Added a JavaScript services list with search, filter and sort, and a lightbox gallery | Part 3 dynamic content |
+| 2 Nov 2026 | enquiries.html, contact.html | Added JavaScript validation, error messages and a processed response | Part 3 forms |
+
+## References
+
+Agafonkin, V. (2023) Leaflet: an open-source JavaScript library for mobile-friendly interactive maps, version 1.9.4. Available at: https://leafletjs.com (Accessed: 2 November 2026).
+
+Formspree (2026) Formspree: form backend for websites. Available at: https://formspree.io (Accessed: 2 November 2026).
+
+Google (2026) SEO starter guide. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
+
+Mozilla Developer Network (2026) Using media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Media_Queries/Using_media_queries (Accessed: 2 November 2026).
+
+OpenStreetMap contributors (2026) OpenStreetMap. Available at: https://www.openstreetmap.org (Accessed: 2 November 2026).
+
+W3C (2024) Web Content Accessibility Guidelines (WCAG) 2.2. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 2 November 2026).
+
+
