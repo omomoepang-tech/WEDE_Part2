@@ -7,8 +7,8 @@
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:darkmagenta !important;
-    color: burlywood !important;
+    background-color: #E8F4F1 !important;
+    color: #1D2B3A !important;
     margin: 0;
     padding: 0;
     line-height: 1.7;
@@ -21,7 +21,7 @@ main{
 }
 
 header{
-    background-color: cadetblue !important;
+    background-color: #1B6F7A !important;
     box-shadow: 0 2px 15px rgb(0, 0, 0, 0.04);
     padding: 20px 5%;
     display: flex;

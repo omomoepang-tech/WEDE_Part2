@@ -1,0 +1,326 @@
+
+/* =====================================================
+   Nova Living Resort - Part 3 styles
+   Loaded AFTER myfirststyles.css
+   ===================================================== */
+
+/* ---------- Colour variables (change these to match your brand) ---------- */
+:root {
+    --p3-accent: #1f6f8b;
+    --p3-accent-dark: #14495c;
+    --p3-soft: #f4f8fa;
+    --p3-border: #d6e2e8;
+    --p3-error: #c0392b;
+    --p3-ok: #1e8449;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- Scroll animation ---------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .fade-in { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Mobile menu button (hidden on desktop) ---------- */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: inherit;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+nav a { transition: opacity 0.3s; }
+nav a:hover, nav a:focus { opacity: 0.75; }
+nav a[aria-current="page"] { text-decoration: underline; }
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    background: var(--p3-accent);
+    color: #fff;
+    border: 0;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+}
+.btn:hover { background: var(--p3-accent-dark); transform: translateY(-2px); }
+
+.link-btn {
+    background: none;
+    border: 0;
+    color: var(--p3-accent);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* ---------- Cards (services list) ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+.card {
+    background: #fff;
+    border: 1px solid var(--p3-border);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+.card .price { font-weight: bold; color: var(--p3-accent-dark); }
+
+/* ---------- Search / filter bar ---------- */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* ---------- Gallery + lightbox ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: zoom-in;
+    transition: transform 0.3s;
+}
+.gallery img:hover { transform: scale(1.04); }
+
+.lightbox,
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.lightbox[hidden],
+.modal[hidden] { display: none; }
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 6px;
+}
+.lightbox-close,
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* ---------- Modal ---------- */
+.modal-content {
+    background: #fff;
+    color: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 480px;
+    width: 90%;
+    position: relative;
+}
+.modal-close { color: #333; top: 0.25rem; right: 0.75rem; }
+
+/* ---------- Accordion (FAQ) ---------- */
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    background: var(--p3-soft);
+    border: 1px solid var(--p3-border);
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.4rem;
+    border-radius: 6px;
+}
+.accordion-btn::after { content: "+"; float: right; }
+.accordion-btn[aria-expanded="true"]::after { content: "\2212"; }
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1rem;
+}
+.accordion-panel.open { padding: 0.5rem 1rem; }
+
+/* ---------- Tabs ---------- */
+.tab-list { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.tab-btn {
+    background: var(--p3-soft);
+    border: 1px solid var(--p3-border);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+}
+.tab-btn.active { background: var(--p3-accent); color: #fff; }
+.tab-panel {
+    display: none;
+    border: 1px solid var(--p3-border);
+    padding: 1rem;
+}
+.tab-panel.active { display: block; }
+
+/* ---------- Forms: validation states ---------- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.form-group label { font-weight: bold; margin-bottom: 0.25rem; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.6rem;
+    border: 1px solid #99aabb;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: var(--p3-error);
+    background: #fdf1ef;
+}
+.form-group input.valid,
+.form-group select.valid,
+.form-group textarea.valid { border-color: var(--p3-ok); }
+.checkbox-group label { font-weight: normal; }
+.error {
+    color: var(--p3-error);
+    font-size: 0.85rem;
+    min-height: 1.1em;
+}
+
+/* ---------- Response box (after a form is submitted) ---------- */
+.response-box {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 5px solid var(--p3-ok);
+    background: #eefaf2;
+    color: #222;
+    border-radius: 6px;
+    max-width: 600px;
+}
+.response-box.fail {
+    border-color: var(--p3-error);
+    background: #fdf1ef;
+}
+
+/* ---------- Contact page layout + map ---------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+#map {
+    height: 350px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* ---------- Footer date ---------- */
+#footer-date { font-weight: bold; }
+
+/* ---------- Phones and small tablets ---------- */
+@media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    nav ul { display: none; flex-direction: column; width: 100%; }
+    nav ul.open { display: flex; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .gallery img { height: 150px; }
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Large desktops (1400px and wider) */
+@media (min-width: 1400px) {
+    main { max-width: 1320px; }
+    body { font-size: 1.05rem; }
+}
+
+/* Laptops (up to 1199px) */
+@media (max-width: 1199px) {
+    main { max-width: 1000px; }
+    nav ul { gap: 25px; }
+}
+
+/* Tablets in landscape (up to 1024px) */
+@media (max-width: 1024px) {
+    header { padding: 16px 4%; }
+    nav ul { gap: 18px; }
+    .features { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .cta-band { padding: 40px 24px; }
+}
+
+/* Tablets in portrait (up to 768px) */
+@media (max-width: 768px) {
+    main { padding: 30px 16px; }
+    .features { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    img.portrait-img { width: 100% !important; height: 340px !important; }
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    iframe { height: 300px; }
+}
+
+/* Mobile phones (up to 600px) */
+@media (max-width: 600px) {
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.3rem; }
+    main { padding: 24px 12px; }
+    .cta-button { display: block; text-align: center; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    footer p { font-size: 0.9rem; }
+    img.portrait-img { height: 280px !important; }
+}
+
+/* Small phones (up to 400px) */
+@media (max-width: 400px) {
+    h1 { font-size: 1.45rem; }
+    header img { height: 36px; }
+    .gallery { grid-template-columns: 1fr; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { font-size: 16px; }
+    iframe { height: 240px; }
+}
+
+/* Phones turned sideways */
+@media (max-height: 500px) and (orientation: landscape) {
+    header { padding: 8px 4%; }
+    main { padding: 16px 12px; }
+}

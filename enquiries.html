@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enquire about VIP suites,spa, fine dining or family activities at Nova Living Resort
+    and get an instant cost estimate.">
+    <meta name="keywords" content="resort enquiry, book a suite, spa package, dining booking, cost estimate, Nova Living Resort.">
+    <meta name="author" content="Nova Living Resort">
     <link rel="stylesheet" href="css_assets/myfirststyles.css">
+    <link rel="stylesheet" href="css_assets/part3.css">
     <title>Nova Living Resort - Enquiries</title>
 
    
@@ -11,7 +16,8 @@
 
       <header> 
         <img src="_images/logo.png.png" alt="Nova Living Resort Logo">
-        <nav>
+        <nav aria-label="Main navigation">
+            <button class="nav toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>>
             <ul>
                 <li><a href="index.html">Home</a></li>
                     
@@ -22,7 +28,7 @@
                 <li><a href="services.html">Services</a></li>
                     
                 
-                <li><a href="enquiries.html">Enquiries</a></li>
+                <li><a href="enquiries.html" aria-current="page">Enquiries</a></li>
                     
                 
                     
@@ -39,51 +45,112 @@
 
         <h1>Nova Living Resort</h1>
         
-        <section class="intro-content">
+        <section class="intro-content fade-in">
             <h1>Booking & Reservation Enquiries</h1>
             <P><h3>Let us arrange your perfect escape. Provide your details below, and our team will contact you directly within
                 24 hours to finalize your arrangements.
             </P></h3>
+            <p><button type="button" class="Link-btn" id="open-moodel"> How are estimates calculated?</button></p>
         </section>
 
         <section class="form-container">
+            <form id="enquiry-form"></form>
             <form action="#" method="POST">
+
                 <div class="form-group">
                     <label for="fullname">Full Name</label>
                     <input type="text" id="fullname" name="fullname" required placeholder="">
+                    <span class="error" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required placeholder="">
+                    <span class="error" aria-live="polite"></span>
+                </div>
+
+                 <div class="form-group">
+                    <label for="phone">Phone Number * (10 digits)</label>
+                    <input type="tel" id="phone" name="phone" required pattern="0[0-9]{9}" maxlength="10" required placeholder="0821234567">
+                    <span class="error" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="service-intrest">Primary Service Intrest</label>
                     <select id="service-intrest" name="service-intrest">
+                        <option value=""> --- Select a Service ---</option>
                         <option value="luxury-suite">VIP Suite Accomodation</option>
-                        <option value="spa-wellness">Spa & Wellness Package</option>
+                        <option value="spa-wellness">Spa &amp; Wellness Package</option>
                         <option value="fine-dining">Fine Dining Experience</option>
-                        <option value="family-activities">Family & Kids Activities</option>
+                        <option value="family-activities">Family &amp; Kids Activities</option>
                     </select>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkin"> Check-in Date (suites only)</label>
+                    <input type="date" id="checkin" name="checkin">
+                    <span class="error" aria-live="polite"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="checkout"> Check-out Date (suites only)</label>
+                    <input type="date" id="checkout" name="checkout">
+                    <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests"> Number of guests * (1 to 12)</label>
+                    <input type="number" id="guests" name="guests" min="1" max="12" value="2" required>
+                    <span class="error" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group"> 
                      <label for="details">Additional Special Requests</label>
                     <textarea id="details" name="details" rows="5" required placeholder=""></textarea>
+                    <span class="error" aria-live="polite"></span>
                 </div>
+
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" id="newsletter" name="newsletter"> Send me resort offers and news (optional) </label>
+                </div>
+
+                 <div class="form-group checkbox-group">
+                    <label><input type="checkbox" id="consent" name="consent" required> I agree to be contacted about this enquiry * </label>
+                </div>
+                <span class="error" aria-live="polite"></span>
 
                 <buttom type="submit" class="submit-btn">Submit Enquiry</buttom>
 
             </form>
         </section>
 
+           <div id="enquiry-response" class="response-box" aria-live="polite" hidden></div> 
+           
+           <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+               <div class="modal-content">
+                <button class="modal-close" aria-label="close">&times;</button>
+                <h2 id="modal-title">How we calculate your estimate</h2>
+                <p>
+                    Suites are charged per night. Other servicesare charged per guest. Final pricing availability are confirmed
+                    by our team.
+                </p>
+            </div>
+           </div>    
+           
      </main>
 
-     <footer>
-        <P>&copy; 2026 Nova Living Resort. All Rights Reserved.</P>
+        <footer>
+        <p>&copy; <span id="footer-year">2026</span> Nova Living Resort. All Rights Reserved.</p>
+        <p>100 Nova Luxury Drive, Coast Edge Estate | Tel: 012 345 6789</p>
+        <p>Email: <a href="mailto:reception@novalivingresort.com">reception@novalivingresort.com</a></p>
+        <p id="footer-date"></p>
+    </footer>
 
-     </footer>
+    <script src="js_assets/part3.js"></script>
+    
+    
      
 
     

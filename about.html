@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Nova Living Resort: our story, our values and our family- friendly
+    luxury hospitality">
+    <meta name="keyword" content="about Nova Living Resort, luxury hospitality, and safety">
+    <meta name="author" content="Nova Living Resort">
     <link rel="stylesheet" href="css_assets/myfirststyles.css">
+    <link rel="stylesheet" href="css_assets/part3.css">
     <title>Nova Living Resort</title>
 </head>
 <body>
 
      <header> 
         <img src="_images/logo.png.png" alt="Nova Living Resort Logo">
-        <nav>
+        <nav aria-label="Main navigation">
+         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+>
             <ul>
                 <li><a href="index.html">Home</a></li>
                     
                 
-                <li><a href="about.html">About us</a></li>
+                <li><a href="about.html" aria-current="page">About us</a></li>
                     
                 
                 <li><a href="services.html">Services</a></li>
@@ -39,13 +46,13 @@
 
         <h1> Nova Living Resort</h1>
 
-        <section class="about - resort">
-            <h1>Our Story</h1>
+        <section class="about - resort fade-in">
+            <h2>Our Story</h2>
             <p>Learn more about the background, history and hospitality behind Nova Living Resort</p>
         </section>
 
         <!-- About us Nova Living Resort in detail -->
-         <section class="about details">
+         <section class="about details fade-in">
             <h2>Luxury Meets Family</h2>
 
             <p>
@@ -55,7 +62,7 @@
                 to be child friendly and family accomodating.
             </p>
 
-            <h2>Uncompromising Safety & Warm Hospitality</h2>
+            <h2>Uncompromising Safety &amp; Warm Hospitality</h2>
 
             <P>
                 From the second you step into our resort, our warm and dedicated staff is there to tend to your every need.
@@ -71,14 +78,40 @@
 
          </section>
 
+        
+
+         <section class="fade-in">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false">Is the resort child friendly?</button>
+                <div class="accordion-panel">
+                    <p>Yes. We offer family-friendly suites, kids activities and a children's menu.</p>
+                </div>
+
+                <button class="accordion-btn" aria-expanded="false">How do I contact reception?</button>
+                <div class="accordion-panel">
+                    <p>Call 012 345 6789 or email reception@novalivingresort.com.</p>
+                </div>
+
+                <button class="accordion-btn" aria-expanded="false">Can I book a spa or dining experience?</button>
+                <div class="accordion-panel">
+                    <p>Yes. Use our <a href="enquiries.html">Enquiries page</a> and choose your primary service interest.</p>
+                </div>
+            </div>
+        </section>
+
+
      </main>
 
-     <footer>
 
-        <p>&copy; 2026 Nova Living Resort. All Rights Reserved</p>
+        <footer>
+        <p>&copy; <span id="footer-year">2026</span> Nova Living Resort. All Rights Reserved.</p>
+        <p>100 Nova Luxury Drive, Coast Edge Estate | Tel: 012 345 6789</p>
+        <p>Email: <a href="mailto:reception@novalivingresort.com">reception@novalivingresort.com</a></p>
+        <p id="footer-date"></p>
+    </footer>
 
-
-     </footer>
+    <script src="js_assets/part3.js"></script>
     
 </body>
 </html>

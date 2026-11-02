@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nova Living Resort by phone, email or message form, and find our
+    location on the interactive map.">
+    <meta name="keywords" content="contact Nova Living Resort, resort location, resort map, reception, directions">
+    <meta name="author" conteent="Nova Living Resort">
     <link rel="stylesheet" href="css_assets/myfirststyles.css">
+    <link rel="stylesheet" href="css_assets/part3.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Nova Living Resort - Contact</title>
    
 
@@ -14,7 +20,9 @@
 
      <header> 
         <img src="_images/logo.png.png" alt="Nova Living Resort Logo">
-        <nav>
+        <nav nav aria-label="Main navigation">
+            <button class="nav toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            
             <ul>
                 <li><a href="index.html">Home</a></li>
                     
@@ -28,7 +36,7 @@
                 <li><a href="enquiries.html">Enquiries</a></li>
                     
                 
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact </a></li>
                     
                 
 
@@ -43,15 +51,15 @@
 
         <h1> Nova Living Resort</h1>
         
-        <section class="intro-content">
-            <h1>Contact Us</h1>
+        <section class="intro-content fade-in">
+            <h2>Contact Us</h2>
             <P>
                 Connect with our main office or check out our email address, phonenumber, whatsapp number or you 
                 rerach our reception desk instantly for directional help.
             </P>
         </section>
 
-        <section class="contact-grid">
+        <section class="contact-grid fade-in">
 
             <div class="info-panel">
                 <h2>Resort Location and Details</h2>
@@ -62,13 +70,16 @@
                 </P>
 
                 <P>
-                    Our front reception desk operates 24 hours a day, 7 days a week to handle arrive check-in Services
-                    and guest needs.
+                    Our front reception desk operates 24 hours a day, 7 days a week to handle our online forms and  arrive check-in Services
+                    for our  guest needs.
+
+                    <iframe src=//docs.google.com/forms/d/e/1FAIpQLSdBzLWkkE7b9vJ3grtMysvNNCpVT30cyT-QfdrjiumC3z9xMw/viewform?usp=publish-editor" width="640" height="1095" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                 </P>
 
-                <div class="map-placeholder">
-                    [ Interactive Resort Location Map Placeholder ]
-                </div>
+                
+                
+                    
+                
             </div>
 
             <div class="info-panel">
@@ -81,12 +92,21 @@
             </div>
         </section>
 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666212.9318931797!2d23.519404187500005!3d-26.187370999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957703919deebb%3A0xbad0a6f919d1f113!2sBeach%20Holidays%20-%20Luxury%20Mauritius%20Island%20Holidays.!5e0!3m2!1sen!2sza!4v1793588691030!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624711.5203450024!2d26.28524222734013!3d-27.476812853839178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950db6e7686899%3A0xcc06a54a28e7b6b8!2sThe%20Houghton%20Hotel%2C%20An%20SLH%20Hotel!5e0!3m2!1sen!2sza!4v1793601780872!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
      </main>
 
-     <footer>
-        <P>&copy; 2026 Nova Living Resort. All Rights Reserved.</P>
+        <footer>
+        <p>&copy; <span id="footer-year">2026</span> Nova Living Resort. All Rights Reserved.</p>
+        <p>100 Nova Luxury Drive, Coast Edge Estate | Tel: 012 345 6789</p>
+        <p>Email: <a href="mailto:reception@novalivingresort.com">reception@novalivingresort.com</a></p>
+        <p id="footer-date"></p>
+    </footer>
 
-     </footer>
+     <script src="js_assets/part3.js"></script>
+
     
+
 </body>
 </html>

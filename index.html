@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova Living Resort offers luxury accomodation, dinning and activities 
+    designed for the whole family">
+    <meta name="keywords" content="Luxury family resort, VIP suites, resort dining , Nova Living Resort">
+    <meta name="author" content="Nova Living Resort">
     <link rel="stylesheet" href="css_assets/myfirststyles.css">
+    <link rel="stylesheet" href="css_assets/part3.css">
+
     <title>Nova Living Resort - Index</title>
 
    
@@ -15,9 +21,12 @@
 
      <header> 
         <img src="_images/logo.png.png" alt="Nova Living Resort Logo">
-        <nav>
+
+        <nav aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                     
                 
                 <li><a href="about.html">About us</a></li>
@@ -46,15 +55,16 @@
 
         
 
-        <section class="hero-section">
+        <section class="hero-section fade-in">
             
             <img src="_images/1.png" alt="Beautiful view of Nova Living Resort luxury exterior" width="600" class="responsive-image">
         </section>
         
 
-        <section class="intro-content">
+        <section class="intro-content fade-in">
 
-            <h1>Welcome to Nova Living Resort</h1>
+            <h3>Welcome to Nova Living Resort, where luxury meets family</h3>
+            
             <h2>Your Luxury Escape Awaits</h2>
         
         
@@ -68,13 +78,13 @@
             <a href="enquiries.html" class="cta-button">Book Your Stay</h3></a>
         </section>
 
-        <section class="features">
+        <section class="features fade-in">
         
                 
             <div class="grid-column">
                  <h2>Luxury Accomodations</h2>
                  <p><h3>Relax in our world class, premium, vip suites designed for total comfort.</p></h3>
-                <img src="_images/2.png" alt="Cozy indoor lounge area" width="450" class="responsive-image">
+                <img src="_images/2.png" alt="Cozy indoor lounge area" width="460" class= "responsive-img">
                 </div>
             
             <div class="grid-column">
@@ -83,6 +93,9 @@
                     Enjoy custom menus prepared by professional chefs alsongside curated activities perferct for individual
                     premium wellness breaks or group leisure events.
                 </p></h3>
+                fiter: brightnesss(1.25) contrast(1.05)
+                <img src="_images/1.2.jpg" alt="This is the Nova Living Resort luxury dining and leisure where you can enjoy 
+                your peals and peace at."  class="responsive-image protrait-img">
                 </div>
 
             
@@ -102,12 +115,14 @@
 
      </main>
 
-     <footer>
+        <footer>
+        <p>&copy; <span id="footer-year">2026</span> Nova Living Resort. All Rights Reserved.</p>
+        <p>100 Nova Luxury Drive, Coast Edge Estate | Tel: 012 345 6789</p>
+        <p>Email: <a href="mailto:reception@novalivingresort.com">reception@novalivingresort.com</a></p>
+        <p id="footer-date"></p>
+    </footer>
 
-         <p>&copy; 2026 Nova Living Resort. All Rights Reserved.</p>
-
-
-     </footer>
+    <script src="js_assets/part3.js"></script>
     
 </body>
 </html>
